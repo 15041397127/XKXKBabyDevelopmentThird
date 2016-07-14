@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void(^RetrunImg)(NSInteger tag);
 @interface ViewController : UIViewController
-
-
+@property (nonatomic, copy) RetrunImg block;
+- (void)returnTag:(RetrunImg)block ;
 @end
 
